@@ -1,0 +1,38 @@
+@media (min-width: 36rem){
+}
+@media (min-width: 48rem){
+}
+@media (min-width: 62rem){
+}
+@media (min-width: 75rem){
+/* navbar pc ================== */
+    #burger {
+        /* no burger in pc */
+        display: none;
+    }
+
+    nav {
+        /* don't wrap nav menu */
+        flex-wrap: nowrap;
+    }
+
+    #nav-menu {
+        /* show nav menu in pc */
+        display: block;
+    }
+
+    #nav-menu > a {
+        /* inline block */
+        display: inline-block;
+
+        /* match logo height */
+        line-height: 4rem;
+    }
+
+    .text-img-con {
+        /* img is .5% span's width in pc */
+        grid-template: 1fr / 1fr .5fr;
+    }
+}
+@media (min-width: 87.5rem){
+}

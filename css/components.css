@@ -1,0 +1,203 @@
+* {
+    /* debug to see divs */
+    /* outline: 1px solid red; */
+}
+
+body {
+    /* remove body margin */
+    margin: 0;
+}
+
+body > * {
+    /* global font */
+    font-family: sans-serif;
+}
+
+/* NAVBAR MOBILE */
+nav {
+    /* wrap the nav menu */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* push burger */
+    justify-content: space-between;
+}
+
+#nav-menu {
+    /* take full nav width */
+    flex-basis: 100%;
+
+    /* hide */
+    display: none;
+}
+
+#nav-menu.show {
+    /* js toggle */
+    display: block;
+}
+
+#nav-menu > a {
+    /* vert stack item */
+    display: block;
+
+    /* space */
+    padding: 0 1rem;
+
+    /* height */
+    line-height: 3rem;
+}
+
+nav a {
+    /* remove old look */
+    color: #333;
+    text-decoration: none;
+}
+
+nav > a {
+    /* bigger font */
+    font-size: 2rem;
+
+    /* space */
+    padding: 0 1rem;
+
+    /* height */
+    line-height: 4rem;
+}
+
+#burger {
+    /* pointer */
+    cursor: pointer;
+
+    /* space */
+    padding: 1rem;
+}
+
+#burger:hover {
+    background-color: #eee;
+    /* fill: #fff; */
+}
+
+#nav-menu > a:hover {
+    background-color: #eee;
+    /* color: #fff; */
+}
+
+/* HERO */
+#hero {
+    text-align: center;
+    background-color: #333;
+
+    padding: 7rem 2rem;
+}
+
+#hero > * {
+    /* white text */
+    color: #fff;
+}
+
+#hero > h1 {
+    /* bigger font */
+    font-size: 6rem;
+
+    /* push down */
+    margin: 0 0 .5rem 0;
+}
+
+#hero > p {
+    /* bigger */
+    font-size: 2rem;
+
+    /* push down */
+    margin: 0 0 4rem 0;
+}
+
+#hero > a {
+    text-decoration: none;
+
+    font-size: 1.5rem;
+
+    /* button look */
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+
+    /* avoid margin collapse */
+    display: inline-block;
+}
+
+#hero > a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+article {
+    /* stay in middle */
+    max-width: 80rem;
+    margin: 0 auto;
+
+    /* space */
+    padding: 4rem 2rem;
+
+    color: #333;
+}
+
+article > h2 {
+    font-size: 2rem;
+
+    /* push down */
+    margin: 0 0 1rem 0;
+}
+
+article > p {
+    font-size: 1.5rem;
+
+    line-height: 1.5;
+
+    /* push down */
+    margin: 0 0 1rem 0;
+}
+
+section.dark {
+    background-color: #eee;
+}
+
+.text-img-con {
+    /* holds span and img */
+    display: grid;
+    gap: 2rem;
+
+    /* mobile img is always 30% screen tall */
+    grid-template: auto 30vh / 1fr;
+}
+
+.text-img-con > img {
+    /* remove all set */
+    width: 0;
+    height: 0;
+
+    /* follow grid cell size */
+    min-height: 100%;
+    min-width: 100%;
+
+    /* clip outside */
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+}
+
+footer > a {
+    color: #fff;
+    text-decoration: none;
+
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 4rem;
+
+    padding: 0 1.5rem;
+}
+
+footer > svg {
+    vertical-align: top;
+    padding: 1rem;
+}
