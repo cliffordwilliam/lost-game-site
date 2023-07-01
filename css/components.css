@@ -1,3 +1,7 @@
+html {
+    /* font-size: 2rem; */
+}
+
 * {
     /* debug to see divs */
     /* outline: 1px solid red; */
@@ -41,10 +45,7 @@ nav {
     display: block;
 
     /* space */
-    padding: 0 1rem;
-
-    /* height */
-    line-height: 3rem;
+    padding: 1rem;
 }
 
 nav a {
@@ -54,32 +55,42 @@ nav a {
 }
 
 nav > a {
-    /* bigger font */
-    font-size: 2rem;
+    /* center align span */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /* space */
-    padding: 0 1rem;
+    flex-grow: 1;
+    max-width: 7rem;
+    min-height: 4rem;
+}
 
-    /* height */
-    line-height: 4rem;
+nav > a > span {
+    /* logo font */
+    font-size: 2rem;
 }
 
 #burger {
     /* pointer */
     cursor: pointer;
 
+    /* center align svg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     /* space */
-    padding: 1rem;
+    flex-grow: 1;
+    max-width: 4rem;
 }
 
 #burger:hover {
     background-color: #eee;
-    /* fill: #fff; */
 }
 
 #nav-menu > a:hover {
     background-color: #eee;
-    /* color: #fff; */
 }
 
 /* HERO */
@@ -88,6 +99,11 @@ nav > a {
     background-color: #333;
 
     padding: 7rem 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 #hero > * {
@@ -96,7 +112,7 @@ nav > a {
 }
 
 #hero > h1 {
-    /* bigger font */
+    /* big font */
     font-size: 6rem;
 
     /* push down */
@@ -114,14 +130,12 @@ nav > a {
 #hero > a {
     text-decoration: none;
 
+    /* big font */
     font-size: 1.5rem;
 
     /* button look */
     padding: 1rem 2rem;
     border: 1px solid #fff;
-
-    /* avoid margin collapse */
-    display: inline-block;
 }
 
 #hero > a:hover {

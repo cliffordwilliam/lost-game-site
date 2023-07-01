@@ -14,19 +14,21 @@
     nav {
         /* don't wrap nav menu */
         flex-wrap: nowrap;
+        justify-content: flex-start;
     }
 
-    #nav-menu {
-        /* show nav menu in pc */
-        display: block;
+    #nav-menu, #nav-menu.show {
+        /* show nav menu */
+        display: flex;
+        flex-basis: auto;
     }
 
     #nav-menu > a {
-        /* inline block */
-        display: inline-block;
-
-        /* match logo height */
-        line-height: 4rem;
+        /* center align span */
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .text-img-con {
