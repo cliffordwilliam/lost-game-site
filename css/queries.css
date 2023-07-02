@@ -5,7 +5,12 @@
 @media (min-width: 62rem){
 }
 @media (min-width: 75rem){
-/* navbar pc ================== */
+    html {
+        /* smaller font */
+        font-size: 1vw;
+    }
+
+    /* NAVBAR */
     #burger {
         /* no burger in pc */
         display: none;
@@ -19,16 +24,15 @@
     #nav-menu, #nav-menu.show {
         /* show nav menu */
         display: flex;
+
+        /* take all nav width */
         flex: 1;
     }
 
+    /* ARTICLE */
     .text-img-con {
-        /* img is .5% span's width in pc */
+        /* img is 50% text con width */
         grid-template: 1fr / 1fr 1fr;
-    }
-
-    html {
-        font-size: 1rem;
     }
 }
 @media (min-width: 87.5rem){

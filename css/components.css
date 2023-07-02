@@ -1,16 +1,16 @@
-html {
-    font-size: 2vw;
-}
-
 * {
     /* debug to see divs */
     /* outline: 1px solid red; */
 }
 
+html {
+    /* bigger font */
+    font-size: 2vw;
+}
+
 body {
-    /* stay in middle */
-    max-width: 80rem;
-    margin: 0 auto;
+    /* no body margin */
+    margin: 0;
 }
 
 body > * {
@@ -18,7 +18,7 @@ body > * {
     font-family: sans-serif;
 }
 
-/* NAVBAR MOBILE */
+/* NAVBAR */
 nav {
     /* wrap the nav menu */
     display: flex;
@@ -29,7 +29,7 @@ nav {
 }
 
 #nav-menu {
-    /* take full nav width */
+    /* take all nav width */
     flex-basis: 100%;
 
     /* hide */
@@ -47,9 +47,11 @@ nav {
     align-items: center;
     justify-content: center;
 
-    /* space */
-    flex-grow: 1;
-    min-height: 4rem;
+    /* take all nav menu width */
+    flex: 1;
+
+    /* fatter */
+    height: 4rem;
 }
 
 nav a {
@@ -64,14 +66,14 @@ nav a {
     align-items: center;
     justify-content: center;
 
-    /* space */
+    /* 8rem width */
     flex: 1;
-    max-width: 7rem;
-    min-height: 4rem;
-}
+    max-width: 8rem;
 
-.logo > span {
-    /* logo font */
+    /* fatter */
+    height: 4rem;
+
+    /* big font */
     font-size: 2rem;
 }
 
@@ -84,8 +86,8 @@ nav a {
     align-items: center;
     justify-content: center;
 
-    /* space */
-    flex-grow: 1;
+    /* 4rem width */
+    flex: 1;
     max-width: 4rem;
 }
 
@@ -103,14 +105,16 @@ nav a {
 
 /* HERO */
 #hero {
-    text-align: center;
     background-color: #223;
-
-    padding: 7rem 1rem;
     
+    /* center */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    text-align: center;
+    padding: 8rem 1rem;
 }
 
 #hero > * {
@@ -141,7 +145,7 @@ nav a {
     font-size: 1.5rem;
 
     /* button look */
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: 1px solid #fff;
 }
 
@@ -150,6 +154,7 @@ nav a {
     background-color: #fff;
 }
 
+/* ARTICLE */
 article {
     /* space */
     padding: 4rem 1rem;
@@ -157,7 +162,7 @@ article {
     color: #223;
 }
 
-article h2 {
+article > h2 {
     /* big font */
     font-size: 2rem;
 
@@ -165,7 +170,7 @@ article h2 {
     margin: 0 0 1rem 0;
 }
 
-article p {
+.text-con > p {
     /* big font */
     font-size: 1.5rem;
 
@@ -176,22 +181,22 @@ article p {
     margin: 0 0 1rem 0;
 }
 
+.text-con > p:last-child {
+    /* last p don't push down */
+    margin: 0;
+}
+
 section.dark {
     background-color: #eef;
 }
 
 .text-img-con {
-    /* holds span and img */
+    /* holds text-con and img */
     display: grid;
     gap: 2rem;
 
     /* mobile img height = 50% screen wide */
     grid-template: auto 50vw / 1fr;
-}
-
-.text-con > p:last-child {
-    /* last p don't push down */
-    margin: 0;
 }
 
 .text-img-con > img {
@@ -203,16 +208,17 @@ section.dark {
     min-height: 100%;
     min-width: 100%;
 
-    /* clip outside */
+    /* clip */
     object-fit: cover;
 }
 
+/* FOOTER */
 footer {
     background-color: #223;
     display: flex;
 }
 
-footer a {
+footer > a {
     /* remove old look */
     color: #fff;
     text-decoration: none;
